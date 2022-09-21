@@ -9,4 +9,5 @@ jobs:
       with:
         version: 'v1.21.2-k3s1'
     - run: |
-        kubectl get nodes
+        kubectl apply -f https://k8s.io/examples/application/deployment.yaml
+        kubectl describe deployment nginx-deployment
